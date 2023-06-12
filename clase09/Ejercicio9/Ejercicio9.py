@@ -1,0 +1,5 @@
+get_countries = input("Enter countries separated by a comma: ")
+splitted_countries = get_countries.split(",")
+unique_countries = set(splitted_countries)
+ordered_countries = sorted(unique_countries)
+print(ordered_countries)
