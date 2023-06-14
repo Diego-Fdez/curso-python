@@ -1,0 +1,18 @@
+{% extends "movies/base.html" %} {% block title %}Directors{% endblock %} {%
+block content %}
+<table>
+  <tr>
+    {% for director in object_list %}
+    <td onclick="window.location.href='/{{director.id}}'">
+      <span class="director_name"
+        >{{ director }}{% if director.dead_date %}&dagger;{% endif %}</span
+      >
+    </td>
+    {% cycle '' '' '
+  </tr>
+  <tr>
+    ' %} {% empty %}
+    <td>No hay directores aún</td>
+    {% endfor %}
+  </tr>
+</table>
